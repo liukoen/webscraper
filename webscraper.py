@@ -8,3 +8,14 @@ driver=webdriver.Chrome()
 
 driver.get("http://nu.nl/")
 
+links =[]
+
+for a in driver.find_elements_by_xpath('.//a'):
+    links.append(a.get_attribute("href"))
+
+
+print(links)
+
+driver.close()
+
+
